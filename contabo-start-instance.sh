@@ -43,6 +43,3 @@ fi
 _CONTABO_ACCESS_TOKEN=$(curl --data "client_id=${CONTABO_CLIENT_ID}" --data "client_secret=${CONTABO_CLIENT_SECRET}" --data-urlencode "username=${CONTABO_USER}" --data-urlencode "password=${CONTABO_PASS}" --data 'grant_type=password' ${CONTABO_REALM_URL}/protocol/openid-connect/token | jq -r '.access_token')
 
 curl -X POST -H "Authorization: Bearer ${_CONTABO_ACCESS_TOKEN}" -H "x-request-id: ${CONTABO_REQUEST_ID}" "${CONTABO_API_URL}/compute/instances/${CONTABO_INSTANCE_ID}/actions/start"
-
-
-DB598DB4-55FE-D2FF-65A7-04A86EAF7625
