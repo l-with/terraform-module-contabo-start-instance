@@ -8,8 +8,18 @@ resource "null_resource" "contab_start_instance" {
       CONTABO_CLIENT_SECRET = var.contabo_client_secret
       CONTABO_USER          = var.contabo_user
       CONTABO_PASS          = var.contabo_pass
-      CONTABO_REQUEST_ID    = upper(uuid())
-      CONTABO_INSTANCE_ID   = var.contabo_instance_id
+      CONTABO_REQUEST_ID = uuidv5(
+        "url",
+        join(
+          ":",
+          [
+            path.module,
+            var.contabo_client_id,
+            var.contabo_instance_id,
+          ]
+        )
+      )
+      CONTABO_INSTANCE_ID = var.contabo_instance_id
     }
   }
   triggers = {
