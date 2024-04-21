@@ -2,6 +2,11 @@
 
 Terraform module to start a contabo instance
 
+The module provides an output value `contabo_module_start_instance_dummy`
+that depends on the null_resource with the local-exec.
+The value is `""`.
+You can use it to create an implicit dependency in every resource with a string value.
+
 <!-- BEGIN_TF_DOCS -->
 #### Requirements
 

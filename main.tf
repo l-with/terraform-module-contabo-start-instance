@@ -13,13 +13,14 @@ resource "null_resource" "contab_start_instance" {
     }
   }
   triggers = {
-    contabo_realm_url              = var.contabo_realm_url
-    contabo_api_url                = var.contabo_api_url
-    contabo_client_id              = var.contabo_client_id
-    contabo_client_secret          = var.contabo_client_secret
-    contabo_user                   = var.contabo_user
-    contabo_pass                   = var.contabo_pass
-    contabo_instance_id            = var.contabo_instance_id
-    contabo_start_instance_trigger = var.contabo_start_instance_trigger
+    contabo_module_start_instance_dummy = ""
+    contabo_realm_url                   = var.contabo_realm_url
+    contabo_api_url                     = var.contabo_api_url
+    contabo_client_id                   = var.contabo_client_id
+    contabo_client_secret               = var.contabo_client_secret
+    contabo_user                        = var.contabo_user
+    contabo_pass                        = var.contabo_pass
+    contabo_instance_id                 = var.contabo_instance_id
+    contabo_start_instance_trigger      = var.contabo_start_instance_trigger
   }
 }
