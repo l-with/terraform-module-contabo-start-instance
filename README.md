@@ -43,5 +43,7 @@ No modules.
 
 #### Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_contabo_module_start_instance_dummy"></a> [contabo\_module\_start\_instance\_dummy](#output\_contabo\_module\_start\_instance\_dummy) | dummy output value ("") for creating dependencies from this module |
 <!-- END_TF_DOCS -->
